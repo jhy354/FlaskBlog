@@ -1,0 +1,13 @@
+<nav class="navbar">
+    <div class="container nav-inner">
+        <a href="/" class="logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <span>My Blog</span>
+        </a>
+        <div class="nav-links">
+            <a href="/" class="{% if nav_active == 'home' %}nav-current{% endif %}">首页</a>
+            <a href="{{ url_for('blog') }}" class="{% if nav_active == 'blog' %}nav-current{% endif %}">文章</a>
+            <a href="{{ url_for('reports_page') }}" class="{% if nav_active == 'reports' %}nav-current{% endif %}">报告</a>
+        </div>
+    </div>
+</nav>

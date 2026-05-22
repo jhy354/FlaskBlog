@@ -1,0 +1,31 @@
+<h2>什么是 Flask？</h2>
+<p>Flask 是 Python 社区最流行的轻量级 Web 框架之一。与 Django 这样的"大而全"框架不同，Flask 只提供核心功能——路由、模板渲染和请求/响应处理，其余部分由开发者自由选择扩展。</p>
+<p>这种设计哲学让 Flask 非常适合以下场景：</p>
+<ul>
+    <li>快速原型开发</li>
+    <li>小型到中型 Web 应用</li>
+    <li>RESTful API 服务</li>
+    <li>微服务架构</li>
+</ul>
+
+<h2>快速开始</h2>
+<p>安装 Flask 只需要一行命令：</p>
+<pre><code>pip install flask</code></pre>
+<p>创建一个 <code>app.py</code>，写入以下代码：</p>
+<pre><code>from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello, World!"</code></pre>
+<p>运行 <code>python app.py</code>，打开浏览器访问 <code>http://localhost:5000</code>，你就能看到 "Hello, World!"。</p>
+
+<h2>核心概念</h2>
+<p>Flask 的核心概念非常少，掌握它们就能上手开发：</p>
+<p><strong>路由（Routing）</strong> — 通过 <code>@app.route()</code> 装饰器将 URL 绑定到 Python 函数。</p>
+<p><strong>模板（Templates）</strong> — 使用 Jinja2 模板引擎生成动态 HTML 页面。</p>
+<p><strong>请求与响应</strong> — Flask 自动解析 HTTP 请求，并支持多种响应格式（HTML、JSON、文件等）。</p>
+
+<h2>小结</h2>
+<p>Flask 的核心理念是"简洁而不简单"。从一行代码打印 "Hello, World!" 到支撑数百万用户的应用，Flask 都能胜任。关键在于，它把选择权交给了你。</p>

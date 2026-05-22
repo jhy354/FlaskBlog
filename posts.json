@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "title": "Python Flask 入门指南",
+        "summary": "Flask 是一个轻量级 WSGI Web 框架，设计简洁，上手快速，同时具备扩展到复杂应用的能力。",
+        "date": "2026-05-20",
+        "read_time": "5 分钟"
+    }
+]
