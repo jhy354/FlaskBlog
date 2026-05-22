@@ -11,3 +11,4 @@ env/
 *.db
 .DS_Store
 Thumbs.db
+static/reports/
