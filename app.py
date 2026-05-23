@@ -42,11 +42,15 @@ def get_courses(reports_list):
 
 
 posts = load_posts()
-reports = load_reports()
+
+
+def get_reports():
+    return load_reports()
 
 
 @app.route("/")
 def index():
+    reports = get_reports()
     return render_template("index.html", posts=posts[:2], reports=reports[:2],
                            total_posts=len(posts), total_reports=len(reports),
                            now=datetime.now(), nav_active="home",
@@ -75,6 +79,7 @@ def post_detail(post_id):
 
 @app.route("/reports")
 def reports_page():
+    reports = get_reports()
     courses = get_courses(reports)
     return render_template("reports.html", reports=reports, courses=courses,
                            nav_active="reports",
@@ -84,10 +89,10 @@ def reports_page():
 
 @app.route("/reports/<int:report_id>")
 def report_detail(report_id):
-    report = next((r for r in reports if r["id"] == report_id), None)
+    report = next((r for r in get_reports() if r["id"] == report_id), None)
     if report is None:
         abort(404)
-    courses = get_courses(reports)
+    courses = get_courses(get_reports())
     return render_template("report.html", report=report, courses=courses,
                            nav_active="reports",
                            page_title=report["title"] + " — My Blog",

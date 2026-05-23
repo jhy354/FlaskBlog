@@ -1,38 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(kill %1)",
+      "Bash(findstr python *)",
+      "Bash(findstr app.py)",
       "Bash(python app.py)",
-      "Bash(curl -s http://localhost:5000)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5000/post/1)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5000/post/99)",
-      "Bash(curl -s http://localhost:5000/post/1)",
-      "Bash(curl -s http://localhost:5000/reports)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5000/reports/1)",
-      "Bash(curl -s http://localhost:5000/reports/1)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5000/reports/99)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:5000/static/reports/无机化学实验/Cu2O的合成以及XRD表征.pdf\")",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:5000/static/reports/%E6%97%A0%E6%9C%BA%E5%8C%96%E5%AD%A6%E5%AE%9E%E9%AA%8C/Cu2O%E7%9A%84%E5%90%88%E6%88%90%E4%BB%A5%E5%8F%8AXRD%E8%A1%A8%E5%BE%81.pdf\")",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5000)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5000/reports)",
-      "Bash(curl -s -o /dev/null -w \"home: %{http_code}\\\\n\" http://localhost:5000)",
-      "Bash(curl -s -o /dev/null -w \"reports: %{http_code}\\\\n\" http://localhost:5000/reports)",
-      "Bash(curl -s -o /dev/null -w \"report/1: %{http_code}\\\\n\" http://localhost:5000/reports/1)",
-      "Bash(xargs echo \"Posts:\")",
-      "Bash(xargs echo \"Reports:\")",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5000/blog)",
-      "Bash(curl -s http://localhost:5000/blog)",
-      "Bash(curl -s -o /dev/null -w \"home: %{http_code} blog: \" http://localhost:5000)",
-      "Bash(curl -s -o /dev/null -w \"blog: %{http_code}\\\\n\" http://localhost:5000/blog)",
-      "Bash(curl -s -o /dev/null -w \"home nav: \" http://localhost:5000)",
-      "Bash(curl -s -o /dev/null -w \"blog nav: \" http://localhost:5000/blog)",
-      "Bash(curl -s -o /dev/null -w \"reports nav: \" http://localhost:5000/reports)",
-      "Bash(pkill -f \"python app.py\")",
-      "Read(//tmp/**)",
-      "Bash(git init *)",
-      "Bash(git remote *)",
-      "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "WebFetch(domain:127.0.0.1)",
+      "Bash(curl -s http://127.0.0.1:5000/reports)",
+      "Bash(curl *)",
+      "Bash(python -c ' *)"
     ]
   }
 }
